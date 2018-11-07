@@ -39,6 +39,8 @@
         self.numberOfColumnsInPortrait = 4;
         self.numberOfColumnsInLandscape = 7;
         
+        self.supportedOrientation = UIInterfaceOrientationMaskAll;
+        
         _selectedAssets = [NSMutableOrderedSet orderedSet];
         
         // Get asset bundle
@@ -72,6 +74,11 @@
     [navigationController didMoveToParentViewController:self];
     
     self.albumsNavigationController = navigationController;
+}
+    
+- (UIInterfaceOrientationMask) supportedInterfaceOrientations
+{
+    return self.supportedOrientation;
 }
 
 @end
