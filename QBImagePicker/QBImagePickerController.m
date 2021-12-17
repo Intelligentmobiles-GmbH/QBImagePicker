@@ -81,4 +81,16 @@
     return self.supportedOrientation;
 }
 
+- (BOOL)shouldAutorotate
+{
+    if (!self.shouldAutoRotateBlock)
+    {
+        return [super shouldAutorotate];
+    }
+    else
+    {
+        return self.shouldAutoRotateBlock();
+    }
+}
+
 @end

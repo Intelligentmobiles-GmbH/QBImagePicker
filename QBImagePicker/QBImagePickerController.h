@@ -50,4 +50,6 @@ typedef NS_ENUM(NSUInteger, QBImagePickerMediaType) {
     
 @property (nonatomic, assign) UIInterfaceOrientationMask supportedOrientation;
 
+@property (nonatomic, strong) BOOL (^shouldAutoRotateBlock)(void);
+
 @end
